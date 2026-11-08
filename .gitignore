@@ -1,19 +1,62 @@
-﻿__pycache__/
-*.py[cod]
+# Python
+__pycache__/
+*.py[codz]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Entornos virtuales y secretos
+.venv/
+venv/
+env/
+ENV/
+.env
+.envrc
+
+# Archivos temporales y respaldos
 *.bak
 *.tmp
 *.log
-
-.venv/
-venv/
-.env
-
 .test_tmp/
 .tmp-tests-*/
 backup_paper_*/
 
+# Pruebas y cobertura
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+
+# Herramientas
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+.vscode/
+
+# Archivos del sistema
 Microsoft.Services.Store.winmd
 
+# Datos: solo permitir los archivos necesarios para el paper trader
 data/*
 !data/BTCUSDT_1h_3y.csv
 !data/forward_validation_BTCUSDT_1h.csv
