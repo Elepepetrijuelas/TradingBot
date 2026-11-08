@@ -1,0 +1,47 @@
+name: Binance Spot Paper Trader
+
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paper-trader
+  cancel-in-progress: false
+
+jobs:
+  paper-trader:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.14"
+
+      - name: Run automated tests
+        run: python -m unittest discover -v
+
+      - name: Run paper trader
+        run: python paper_trader.py
+
+      - name: Save updated simulation data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/forward_validation_BTCUSDT_1h.csv
+          git add data/paper_trader_state.json
+          git add data/paper_trader_trades.csv
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update paper trading data"
+            git push
+          fi
