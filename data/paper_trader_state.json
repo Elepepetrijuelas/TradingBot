@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "strategy": "SMA50/200+ADX14>=30",
+  "last_processed_time": 1794106800.0,
+  "capital": "19.760400000",
+  "weekly_loss": "0.239600000",
+  "week_id": "2026-W45",
+  "position_size": "0",
+  "entry_price": "0",
+  "stop_price": "0",
+  "entry_time": null,
+  "in_position": false,
+  "pending_entry": false,
+  "pending_exit": false,
+  "peak_equity": "20.00",
+  "max_drawdown": "0.0119800",
+  "trades": [
+    {
+      "time": "2026-11-05T14:00:00+00:00",
+      "reason": "Stop loss",
+      "entry_time": "2026-11-05T09:00:00+00:00",
+      "entry": "80494.05000000",
+      "exit": "78884.1690000000",
+      "size": "10.0000",
+      "gross": "-0.200000",
+      "costs": "0.039600000",
+      "net": "-0.239600000",
+      "capital": "19.760400000",
+      "weekly_loss_after_trade": "0.239600000"
+    }
+  ]
+}
