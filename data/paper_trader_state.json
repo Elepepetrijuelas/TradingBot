@@ -1,10 +1,10 @@
 {
   "version": 1,
   "strategy": "SMA50/200+ADX14>=30",
-  "last_processed_time": 1794168000.0,
+  "last_processed_time": 1794182400.0,
   "capital": "19.760400000",
-  "weekly_loss": "0.239600000",
-  "week_id": "2026-W45",
+  "weekly_loss": "0",
+  "week_id": "2026-W46",
   "position_size": "0",
   "entry_price": "0",
   "stop_price": "0",
